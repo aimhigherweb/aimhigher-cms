@@ -9,5 +9,15 @@ module.exports = ({ env }) => ({
 		  defaultPath: 'assets',
 		  maxConcurrent: 10
 		}
-	}
+	},
+	email: {
+		provider: 'sendgrid',
+		providerOptions: {
+		  apiKey: env('SENDGRID_API_KEY'),
+		},
+		settings: {
+		  defaultFrom: 'admin@aimhigherweb.design',
+		  defaultReplyTo: 'admin@adimhigherweb.design',
+		},
+	},
   });
