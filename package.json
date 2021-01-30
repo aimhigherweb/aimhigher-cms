@@ -1,0 +1,23 @@
+{
+  "name": "aimhigher-cms",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "strapi": "3.4.5",
+    "strapi-admin": "3.4.5",
+    "strapi-utils": "3.4.5",
+    "strapi-plugin-content-type-builder": "3.4.5",
+    "strapi-plugin-content-manager": "3.4.5",
+    "strapi-plugin-users-permissions": "3.4.5",
+    "strapi-plugin-email": "3.4.5",
+    "strapi-plugin-upload": "3.4.5",
+    "strapi-connector-mongoose": "3.4.5"
+  },
+  "license": "MIT"
+}
