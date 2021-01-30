@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "docs",
+  "info": {
+    "name": "Docs",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "unique": true,
+      "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Title",
+      "required": false
+    },
+    "Update": {
+      "type": "date"
+    },
+    "clients": {
+      "via": "docs",
+      "collection": "client",
+      "dominant": true
+    },
+    "Content": {
+      "type": "richtext"
+    },
+    "section": {
+      "collection": "documentation-sections",
+      "via": "docs"
+    }
+  }
+}

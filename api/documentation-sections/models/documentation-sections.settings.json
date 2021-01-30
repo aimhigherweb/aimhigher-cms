@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documentation_sections",
+  "info": {
+    "name": "Documentation Sections",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "Slug": {
+      "type": "uid",
+      "targetField": "Name",
+      "required": false
+    },
+    "parent": {
+      "model": "documentation-sections",
+      "via": "sub_sections"
+    },
+    "sub_sections": {
+      "collection": "documentation-sections",
+      "via": "parent"
+    },
+    "docs": {
+      "via": "section",
+      "model": "docs"
+    },
+    "technologies": {
+      "via": "documentation_sections",
+      "collection": "technologies"
+    }
+  }
+}

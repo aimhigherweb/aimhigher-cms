@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "technologies",
+  "info": {
+    "name": "Technologies",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "Name": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "Name",
+      "required": false
+    },
+    "Image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "case_studies": {
+      "collection": "case-study",
+      "via": "technologies"
+    },
+    "documentation_sections": {
+      "collection": "documentation-sections",
+      "via": "technologies",
+      "dominant": true
+    }
+  }
+}

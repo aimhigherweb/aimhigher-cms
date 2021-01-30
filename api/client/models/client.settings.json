@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "name": "Client",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "required": false,
+      "targetField": "name"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "docs": {
+      "collection": "docs",
+      "via": "clients"
+    },
+    "testimonials": {
+      "collection": "testimonials",
+      "via": "client"
+    },
+    "websites": {
+      "collection": "website",
+      "via": "client"
+    }
+  }
+}

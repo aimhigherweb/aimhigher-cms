@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_case_study_screenshots",
+  "info": {
+    "name": "Screenshots",
+    "icon": "laptop",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "laptop": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "tablet": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
+    "mobile": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

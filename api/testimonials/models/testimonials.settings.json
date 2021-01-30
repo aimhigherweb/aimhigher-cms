@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonials",
+  "info": {
+    "name": "Testimonials",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "quote": {
+      "type": "richtext"
+    },
+    "client": {
+      "via": "testimonials",
+      "model": "client"
+    },
+    "case_study": {
+      "via": "testimonials",
+      "model": "case-study"
+    }
+  }
+}

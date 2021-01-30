@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "websites",
+  "info": {
+    "name": "Website",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "domain": {
+      "type": "string",
+      "required": false,
+      "unique": true
+    },
+    "live": {
+      "type": "boolean",
+      "default": false
+    },
+    "https": {
+      "type": "boolean",
+      "default": true
+    },
+    "colours": {
+      "type": "component",
+      "repeatable": true,
+      "component": "brand.colours"
+    },
+    "client": {
+      "via": "websites",
+      "model": "client"
+    },
+    "fonts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "brand.fonts"
+    },
+    "case_studies": {
+      "via": "website",
+      "collection": "case-study"
+    }
+  }
+}

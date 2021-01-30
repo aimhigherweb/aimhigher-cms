@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_brand_colours",
+  "info": {
+    "name": "Colours",
+    "icon": "pen",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "hex": {
+      "type": "string",
+      "regex": "^#[a-fA-F0-9]{6}$",
+      "default": "#"
+    },
+    "name": {
+      "type": "string",
+      "default": "Primary",
+      "required": false
+    }
+  }
+}

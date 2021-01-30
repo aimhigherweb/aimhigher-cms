@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_brand_fonts",
+  "info": {
+    "name": "Fonts",
+    "icon": "text-height"
+  },
+  "options": {},
+  "attributes": {
+    "font_heading": {
+      "type": "string"
+    },
+    "font_body": {
+      "type": "string"
+    }
+  }
+}

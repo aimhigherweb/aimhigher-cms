@@ -1,0 +1,49 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": {
+    "name": "Case Study",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "launch": {
+      "type": "date"
+    },
+    "website": {
+      "model": "website",
+      "via": "case_studies"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "screenshots": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case-study.screenshots"
+    },
+    "testimonials": {
+      "collection": "testimonials",
+      "via": "case_study"
+    },
+    "title": {
+      "type": "string"
+    },
+    "technologies": {
+      "via": "case_studies",
+      "collection": "technologies",
+      "dominant": true
+    },
+    "github": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
