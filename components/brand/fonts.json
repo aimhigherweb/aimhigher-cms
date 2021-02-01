@@ -6,10 +6,13 @@
   },
   "options": {},
   "attributes": {
-    "font_heading": {
+    "heading": {
       "type": "string"
     },
-    "font_body": {
+    "body": {
+      "type": "string"
+    },
+    "code": {
       "type": "string"
     }
   }
