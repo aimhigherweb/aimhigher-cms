@@ -1,0 +1,32 @@
+{
+  "collectionName": "components_project_tasks",
+  "info": {
+    "name": "task",
+    "icon": "check-double"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "start": {
+      "type": "date"
+    },
+    "end": {
+      "type": "date"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "notStarted",
+        "inProgress",
+        "blocked",
+        "inReview",
+        "completed"
+      ]
+    }
+  }
+}

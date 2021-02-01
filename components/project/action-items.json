@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_project_action_items",
+  "info": {
+    "name": "Action Items",
+    "icon": "check",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "due": {
+      "type": "date"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "finance",
+        "content",
+        "design",
+        "development"
+      ]
+    }
+  }
+}

@@ -30,8 +30,8 @@
       "component": "brand.colours"
     },
     "client": {
-      "via": "websites",
-      "model": "client"
+      "model": "client",
+      "via": "websites"
     },
     "fonts": {
       "type": "component",
@@ -39,8 +39,20 @@
       "component": "brand.fonts"
     },
     "case_studies": {
+      "collection": "case-study",
+      "via": "website"
+    },
+    "analytics_view": {
+      "type": "string",
+      "unique": true
+    },
+    "netlify_site": {
+      "type": "string",
+      "unique": true
+    },
+    "projects": {
       "via": "website",
-      "collection": "case-study"
+      "collection": "project"
     }
   }
 }

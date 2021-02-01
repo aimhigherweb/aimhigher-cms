@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "Project",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    },
+    "quote": {
+      "type": "string"
+    },
+    "website": {
+      "model": "website",
+      "via": "projects"
+    },
+    "task": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.task"
+    },
+    "actionItems": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.action-items"
+    }
+  }
+}

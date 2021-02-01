@@ -15,8 +15,8 @@
       "type": "date"
     },
     "website": {
-      "model": "website",
-      "via": "case_studies"
+      "via": "case_studies",
+      "model": "website"
     },
     "content": {
       "type": "richtext"
