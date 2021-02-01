@@ -30,8 +30,8 @@
       "required": false
     },
     "docs": {
-      "collection": "docs",
-      "via": "clients"
+      "via": "clients",
+      "collection": "docs"
     },
     "testimonials": {
       "collection": "testimonials",

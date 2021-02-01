@@ -11,30 +11,30 @@
     "draftAndPublish": true
   },
   "attributes": {
-    "Title": {
+    "title": {
       "type": "string",
-      "unique": true,
       "required": false
     },
     "slug": {
       "type": "uid",
-      "targetField": "Title",
-      "required": false
+      "targetField": "title",
+      "required": false,
+      "unique": true
     },
-    "Update": {
+    "update": {
       "type": "date"
     },
     "clients": {
-      "via": "docs",
       "collection": "client",
+      "via": "docs",
       "dominant": true
     },
-    "Content": {
+    "content": {
       "type": "richtext"
     },
     "section": {
-      "collection": "documentation-sections",
-      "via": "docs"
+      "via": "docs",
+      "collection": "documentation-sections"
     }
   }
 }

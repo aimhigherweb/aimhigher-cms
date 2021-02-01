@@ -11,17 +11,17 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
-      "required": false,
-      "unique": true
+      "required": false
     },
     "slug": {
       "type": "uid",
-      "targetField": "Name",
-      "required": false
+      "targetField": "name",
+      "required": false,
+      "unique": true
     },
-    "Image": {
+    "image": {
       "model": "file",
       "via": "related",
       "allowedTypes": [
@@ -35,8 +35,8 @@
       "via": "technologies"
     },
     "documentation_sections": {
-      "collection": "documentation-sections",
       "via": "technologies",
+      "collection": "documentation-sections",
       "dominant": true
     }
   }

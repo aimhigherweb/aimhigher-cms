@@ -11,15 +11,15 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "Name": {
+    "name": {
       "type": "string",
+      "required": false
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name",
       "required": false,
       "unique": true
-    },
-    "Slug": {
-      "type": "uid",
-      "targetField": "Name",
-      "required": false
     },
     "parent": {
       "model": "documentation-sections",
@@ -30,12 +30,12 @@
       "via": "parent"
     },
     "docs": {
-      "via": "section",
-      "model": "docs"
+      "model": "docs",
+      "via": "section"
     },
     "technologies": {
-      "via": "documentation_sections",
-      "collection": "technologies"
+      "collection": "technologies",
+      "via": "documentation_sections"
     }
   }
 }
