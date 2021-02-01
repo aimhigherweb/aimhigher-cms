@@ -8,7 +8,7 @@ module.exports = ({ env }) => ({
 		  containerName: env('STORAGE_CONTAINER_NAME'),
 		  defaultPath: 'assets',
 		  maxConcurrent: 10
-		}
+	}
 	},
 	email: {
 		provider: 'sendgrid',

@@ -20,7 +20,6 @@
     "strapi-plugin-oembed": "^0.3.0",
     "strapi-plugin-upload": "^3.4.5",
     "strapi-plugin-users-permissions": "^3.4.5",
-    "strapi-plugin-wysiwsg-react-md-editor": "^1.0.3",
     "strapi-provider-email-sendgrid": "^3.4.5",
     "strapi-provider-upload-azure-storage": "^1.1.1",
     "strapi-utils": "^3.4.5"
