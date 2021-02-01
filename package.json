@@ -9,6 +9,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
+    "eslint-config-airbnb-base": "^14.2.1",
     "strapi": "^3.4.5",
     "strapi-admin": "^3.4.5",
     "strapi-connector-mongoose": "^3.4.5",
