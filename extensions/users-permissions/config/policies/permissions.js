@@ -11,20 +11,26 @@ module.exports = async (ctx, next) => {
 	}
 
 	// add the detection of `token` query parameter
+	// console.log(ctx)
 	if (
-		(ctx.request && ctx.request.header && ctx.request.header.authorization) ||
-		(ctx.request.query && ctx.request.query.token)
+		(ctx?.request?.header?.authorization) ||
+		(ctx.request?.query?.token) ||
+		(ctx?.request?.header?.token)
 	) {
 		try {
 			// init `id` and `isAdmin` outside of validation blocks
 			let id;
 			let isAdmin;
 
-			if (ctx.request.query && ctx.request.query.token) {
+			if (ctx.request?.query?.token || ctx.request?.header?.token) {
 				// find the token entry that match the token from the request
+				const authToken = ctx.request?.query?.token || ctx.request?.header?.token
+
 				const [token] = await strapi.query('token').find({
-					token: ctx.request.query.token
+					token: authToken
 				});
+
+				console.log(token)
 
 				if (!token) {
 					throw new Error(`Invalid token: This token doesn't exist`);
