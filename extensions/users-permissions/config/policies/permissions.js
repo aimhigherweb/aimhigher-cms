@@ -11,18 +11,21 @@ module.exports = async (ctx, next) => {
 	}
 
 	// add the detection of `token` query parameter
-	// console.log(ctx)
+	// console.log(await strapi.plugins[
+	// 	'users-permissions'
+	// ].services.jwt.getToken(ctx))
+	// console.log(ctx.request.header.authorization)
+
 	if (
 		(ctx?.request?.header?.authorization) ||
-		(ctx.request?.query?.token) ||
-		(ctx?.request?.header?.token)
+		(ctx?.request?.query?.token)
 	) {
 		try {
 			// init `id` and `isAdmin` outside of validation blocks
 			let id;
 			let isAdmin;
 
-			if (ctx.request?.query?.token || ctx.request?.header?.token) {
+			if (ctx.request?.query?.token) {
 				// find the token entry that match the token from the request
 				const authToken = ctx.request?.query?.token || ctx.request?.header?.token
 
@@ -30,7 +33,7 @@ module.exports = async (ctx, next) => {
 					token: authToken
 				});
 
-				console.log(token)
+				// console.log(token)
 
 				if (!token) {
 					throw new Error(`Invalid token: This token doesn't exist`);
@@ -42,14 +45,34 @@ module.exports = async (ctx, next) => {
 				}
 
 				delete ctx.request.query.token;
-			} else if (ctx.request && ctx.request.header && ctx.request.header.authorization) {
+			} else if (ctx?.request?.header?.authorization) {
 				// use the current system with JWT in the header
-				const decrypted = await strapi.plugins[
-					'users-permissions'
-				].services.jwt.getToken(ctx);
+				const authToken = ctx?.request?.header?.authorization.replace('Bearer ', '')
 
-				id = decrypted.id;
-				isAdmin = decrypted.isAdmin || false;
+				const [token] = await strapi.query('token').find({
+					token: authToken
+				});
+
+				if(token) {
+					if (token.user && typeof token.token === 'string') {
+						id = token.user.id;
+					}
+					isAdmin = false;
+				}
+				else {
+					const decrypted = await strapi.plugins[
+						'users-permissions'
+					].services.jwt.getToken(ctx);
+	
+					console.log(decrypted)
+	
+					if(!decrypted) {
+						console.log('decrypted is false')
+					}
+	
+					id = decrypted.id;
+					isAdmin = decrypted.isAdmin || false;
+				}
 			}			
 
 			// this is the line that already exist in the code
