@@ -22,8 +22,8 @@
       "type": "string"
     },
     "website": {
-      "model": "website",
-      "via": "projects"
+      "via": "projects",
+      "model": "website"
     },
     "task": {
       "type": "component",

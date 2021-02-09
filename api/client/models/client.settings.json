@@ -38,8 +38,13 @@
       "via": "client"
     },
     "websites": {
-      "collection": "website",
-      "via": "client"
+      "via": "client",
+      "collection": "website"
+    },
+    "portal_permissions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "portal.portal-permissions"
     }
   }
 }

@@ -51,8 +51,13 @@
       "unique": true
     },
     "projects": {
-      "via": "website",
-      "collection": "project"
+      "collection": "project",
+      "via": "website"
+    },
+    "portal_permissions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "portal.portal-permissions"
     }
   }
 }

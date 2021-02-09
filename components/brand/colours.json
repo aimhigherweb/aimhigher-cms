@@ -13,7 +13,6 @@
     },
     "name": {
       "type": "string",
-      "default": "Primary",
       "required": false
     }
   }
