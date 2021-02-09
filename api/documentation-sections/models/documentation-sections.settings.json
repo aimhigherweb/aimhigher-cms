@@ -17,9 +17,7 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "name",
-      "required": false,
-      "unique": true
+      "targetField": "name"
     },
     "parent": {
       "model": "documentation-sections",
@@ -29,13 +27,13 @@
       "collection": "documentation-sections",
       "via": "parent"
     },
-    "docs": {
-      "model": "docs",
-      "via": "section"
-    },
     "technologies": {
       "collection": "technologies",
       "via": "documentation_sections"
+    },
+    "docs": {
+      "collection": "docs",
+      "via": "section"
     }
   }
 }

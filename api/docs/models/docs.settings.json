@@ -17,9 +17,7 @@
     },
     "slug": {
       "type": "uid",
-      "targetField": "title",
-      "required": false,
-      "unique": true
+      "targetField": "title"
     },
     "update": {
       "type": "date"
@@ -34,7 +32,7 @@
     },
     "section": {
       "via": "docs",
-      "collection": "documentation-sections"
+      "model": "documentation-sections"
     }
   }
 }

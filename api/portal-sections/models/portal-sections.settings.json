@@ -11,14 +11,11 @@
   },
   "attributes": {
     "title": {
-      "type": "string",
-      "required": true,
-      "unique": true
+      "type": "string"
     },
     "slug": {
       "type": "uid",
-      "targetField": "title",
-      "required": true
+      "targetField": "title"
     }
   }
 }
