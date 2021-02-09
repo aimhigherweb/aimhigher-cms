@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/briefs",
+      "handler": "brief.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/briefs/count",
+      "handler": "brief.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/briefs/:id",
+      "handler": "brief.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/briefs",
+      "handler": "brief.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/briefs/:id",
+      "handler": "brief.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/briefs/:id",
+      "handler": "brief.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

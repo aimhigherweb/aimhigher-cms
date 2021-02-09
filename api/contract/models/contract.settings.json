@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contracts",
+  "info": {
+    "name": "Contract",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "project": {
+      "model": "project",
+      "via": "contract"
+    },
+    "client": {
+      "model": "client",
+      "via": "contracts"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "approval": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.approval"
+    }
+  }
+}

@@ -45,6 +45,14 @@
       "type": "component",
       "repeatable": false,
       "component": "portal.portal-permissions"
+    },
+    "briefs": {
+      "via": "client",
+      "collection": "brief"
+    },
+    "contracts": {
+      "via": "client",
+      "collection": "contract"
     }
   }
 }

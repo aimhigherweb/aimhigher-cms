@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_project_approvals",
+  "info": {
+    "name": "approval",
+    "icon": "user-edit"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "company": {
+      "type": "string"
+    },
+    "date": {
+      "type": "datetime"
+    },
+    "approved": {
+      "type": "boolean"
+    },
+    "email": {
+      "type": "email"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "briefs",
+  "info": {
+    "name": "Brief"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "project": {
+      "model": "project",
+      "via": "brief"
+    },
+    "client": {
+      "model": "client",
+      "via": "briefs"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "approval": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.approval"
+    }
+  }
+}
