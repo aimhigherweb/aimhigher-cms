@@ -2,18 +2,13 @@
   "collectionName": "components_portal_portal_permissions",
   "info": {
     "name": "Portal Permissions",
-    "icon": "lock"
+    "icon": "lock",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Sections": {
-      "type": "enumeration",
-      "enum": [
-        "docs",
-        "projects",
-        "analytics",
-        "build"
-      ]
+    "sections": {
+      "collection": "portal-sections"
     }
   }
 }
