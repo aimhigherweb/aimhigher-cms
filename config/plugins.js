@@ -20,4 +20,7 @@ module.exports = ({ env }) => ({
 		  defaultReplyTo: 'admin@adimhigherweb.design',
 		},
 	},
+	sentry: {
+		dsn: env('SENTRY_DSN')
+	}
   });
