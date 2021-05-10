@@ -10,21 +10,21 @@
   },
   "dependencies": {
     "eslint-config-airbnb-base": "^14.2.1",
-    "strapi": "^3.5.0",
-    "strapi-admin": "^3.5.0",
-    "strapi-connector-mongoose": "^3.5.0",
-    "strapi-plugin-content-manager": "^3.5.0",
-    "strapi-plugin-content-type-builder": "^3.5.0",
-    "strapi-plugin-email": "^3.5.0",
+    "strapi": "^3.6.1",
+    "strapi-admin": "^3.6.1",
+    "strapi-connector-mongoose": "^3.6.1",
+    "strapi-plugin-content-manager": "^3.6.1",
+    "strapi-plugin-content-type-builder": "^3.6.1",
+    "strapi-plugin-email": "^3.6.1",
     "strapi-plugin-entity-relationship-chart": "^3.1.0",
-    "strapi-plugin-graphql": "^3.5.0",
+    "strapi-plugin-graphql": "^3.6.1",
     "strapi-plugin-oembed": "^0.3.0",
-    "strapi-plugin-sentry": "^3.5.0",
-    "strapi-plugin-upload": "^3.5.0",
-    "strapi-plugin-users-permissions": "^3.5.0",
-    "strapi-provider-email-sendgrid": "^3.5.0",
+    "strapi-plugin-sentry": "^3.6.1",
+    "strapi-plugin-upload": "^3.6.1",
+    "strapi-plugin-users-permissions": "^3.6.1",
+    "strapi-provider-email-sendgrid": "^3.6.1",
     "strapi-provider-upload-azure-storage": "^1.1.2",
-    "strapi-utils": "^3.5.0"
+    "strapi-utils": "^3.6.1"
   },
   "license": "MIT"
 }
