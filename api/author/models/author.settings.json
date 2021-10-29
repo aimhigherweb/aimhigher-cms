@@ -11,11 +11,6 @@
     "draftAndPublish": false
   },
   "attributes": {
-    "admin_user": {
-      "unique": true,
-      "plugin": "admin",
-      "model": "user"
-    },
     "bio": {
       "type": "richtext"
     },
@@ -36,6 +31,9 @@
     "blog_posts": {
       "via": "author",
       "collection": "blog-posts"
+    },
+    "name": {
+      "type": "string"
     }
   }
 }

@@ -44,7 +44,7 @@
       "model": "author"
     },
     "categories": {
-      "type": "json"
+      "type": "string"
     }
   }
 }

@@ -2,7 +2,7 @@
   "name": "aimhigher-cms",
   "version": "1.0.0",
   "scripts": {
-    "develop": "strapi develop",
+    "develop": "doppler run -- strapi develop",
     "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
