@@ -48,6 +48,14 @@
     },
     "canonical": {
       "type": "string"
+    },
+    "cta": {
+      "type": "enumeration",
+      "enum": [
+        "generic_form",
+        "none"
+      ],
+      "default": "generic_form"
     }
   }
 }
