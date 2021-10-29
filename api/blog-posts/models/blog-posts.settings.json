@@ -45,6 +45,9 @@
     },
     "categories": {
       "type": "string"
+    },
+    "canonical": {
+      "type": "string"
     }
   }
 }
