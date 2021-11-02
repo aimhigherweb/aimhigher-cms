@@ -39,8 +39,8 @@
       "component": "brand.fonts"
     },
     "case_studies": {
-      "collection": "case-study",
-      "via": "website"
+      "via": "website",
+      "collection": "case-study"
     },
     "analytics_view": {
       "type": "string",

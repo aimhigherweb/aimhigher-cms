@@ -44,6 +44,11 @@
     "featured": {
       "type": "boolean",
       "default": true
+    },
+    "partners": {
+      "collection": "partners",
+      "via": "case_studies",
+      "dominant": true
     }
   }
 }

@@ -31,8 +31,8 @@
       "required": false
     },
     "case_studies": {
-      "collection": "case-study",
-      "via": "technologies"
+      "via": "technologies",
+      "collection": "case-study"
     },
     "documentation_sections": {
       "via": "technologies",
