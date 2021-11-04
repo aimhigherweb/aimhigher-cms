@@ -53,7 +53,8 @@
       "type": "enumeration",
       "enum": [
         "generic_form",
-        "none"
+        "none",
+        "book_a_call"
       ],
       "default": "generic_form"
     }
