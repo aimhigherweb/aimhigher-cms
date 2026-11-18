@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": {
+    "singularName": "case-study",
+    "pluralName": "case-studies",
+    "displayName": "Case Study"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "launch": {
+      "type": "date"
+    },
+    "website": {
+      "type": "relation",
+      "target": "api::website.website",
+      "relation": "manyToOne",
+      "inversedBy": "case_studies"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "screenshots": {
+      "type": "component",
+      "repeatable": false,
+      "component": "case-study.screenshots"
+    },
+    "testimonials": {
+      "type": "relation",
+      "target": "api::testimonial.testimonial",
+      "relation": "oneToMany",
+      "mappedBy": "case_study"
+    },
+    "title": {
+      "type": "string"
+    },
+    "technologies": {
+      "type": "relation",
+      "target": "api::technology.technology",
+      "relation": "manyToMany",
+      "inversedBy": "case_studies"
+    },
+    "github": {
+      "type": "string"
+    },
+    "featured": {
+      "type": "boolean",
+      "default": true
+    },
+    "partners": {
+      "type": "relation",
+      "target": "api::partner.partner",
+      "relation": "manyToMany",
+      "inversedBy": "case_studies"
+    }
+  }
+}

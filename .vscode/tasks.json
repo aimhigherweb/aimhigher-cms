@@ -1,0 +1,61 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "start",
+			"detail": "strapi start (runs automatically when the folder opens)",
+			"type": "npm",
+			"script": "start",
+			"isBackground": true,
+			"problemMatcher": [],
+			"runOptions": { "runOn": "folderOpen" },
+			"presentation": { "panel": "dedicated", "reveal": "silent", "group": "server" }
+		},
+		{
+			"label": "develop",
+			"detail": "strapi develop (dev server with admin auto-reload)",
+			"type": "npm",
+			"script": "develop",
+			"isBackground": true,
+			"problemMatcher": [],
+			"presentation": { "panel": "dedicated", "group": "server" }
+		},
+		{
+			"label": "build",
+			"detail": "strapi build (admin panel)",
+			"type": "npm",
+			"script": "build",
+			"group": { "kind": "build", "isDefault": true },
+			"problemMatcher": []
+		},
+		{
+			"label": "console",
+			"detail": "strapi console (REPL with the app loaded)",
+			"type": "npm",
+			"script": "console",
+			"problemMatcher": [],
+			"presentation": { "panel": "dedicated", "focus": true }
+		},
+		{
+			"label": "strapi",
+			"detail": "strapi CLI (lists commands)",
+			"type": "npm",
+			"script": "strapi",
+			"problemMatcher": []
+		},
+		{
+			"label": "upgrade",
+			"detail": "Upgrade Strapi to the latest version",
+			"type": "npm",
+			"script": "upgrade",
+			"problemMatcher": []
+		},
+		{
+			"label": "upgrade:dry",
+			"detail": "Preview a Strapi upgrade without changing files",
+			"type": "npm",
+			"script": "upgrade:dry",
+			"problemMatcher": []
+		}
+	]
+}

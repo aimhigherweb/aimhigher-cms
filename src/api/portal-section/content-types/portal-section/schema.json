@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "portal_sections",
+  "info": {
+    "singularName": "portal-section",
+    "pluralName": "portal-sections",
+    "displayName": "Portal Sections"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}

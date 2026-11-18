@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "briefs",
+  "info": {
+    "singularName": "brief",
+    "pluralName": "briefs",
+    "displayName": "Brief"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "project": {
+      "type": "relation",
+      "target": "api::project.project",
+      "relation": "oneToOne",
+      "inversedBy": "brief"
+    },
+    "client": {
+      "type": "relation",
+      "target": "api::client.client",
+      "relation": "manyToOne",
+      "inversedBy": "briefs"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "approval": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.approval"
+    }
+  }
+}
