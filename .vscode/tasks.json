@@ -4,8 +4,8 @@
 		{
 			"label": "start",
 			"detail": "strapi start (runs automatically when the folder opens)",
-			"type": "npm",
-			"script": "start",
+			"type": "shell",
+			"command": "op run --env-file=config/.env.1password -- npm run start",
 			"isBackground": true,
 			"problemMatcher": [],
 			"runOptions": { "runOn": "folderOpen" },
@@ -14,8 +14,8 @@
 		{
 			"label": "develop",
 			"detail": "strapi develop (dev server with admin auto-reload)",
-			"type": "npm",
-			"script": "develop",
+			"type": "shell",
+			"command": "op run --env-file=config/.env.1password -- npm run develop",
 			"isBackground": true,
 			"problemMatcher": [],
 			"presentation": { "panel": "dedicated", "group": "server" }
@@ -31,8 +31,8 @@
 		{
 			"label": "console",
 			"detail": "strapi console (REPL with the app loaded)",
-			"type": "npm",
-			"script": "console",
+			"type": "shell",
+			"command": "op run --env-file=config/.env.1password -- npm run console",
 			"problemMatcher": [],
 			"presentation": { "panel": "dedicated", "focus": true }
 		},

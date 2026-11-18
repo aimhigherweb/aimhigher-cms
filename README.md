@@ -10,13 +10,14 @@ Requires Node 24 (`.nvmrc`; fnm/nvm pick it up).
 ```sh
 npm ci
 npm run build
-npm run develop              # http://localhost:1337/admin
+op run --env-file=config/.env.1password -- npm run develop   # http://localhost:1337/admin
 ```
 
 `config/.env.1password` lists every variable, as `op://AimHigher/aimhigher-cms/<FIELD>` references
-or plain values that aren't secret. It holds no secrets, so it's committed. `develop`, `start` and
-`console` run through `scripts/with-env.sh`, which resolves it with `op run` (the 1Password CLI). On
-Azure the script skips it and the App Service settings are used instead.
+or plain values that aren't secret. It holds no secrets, so it's committed. The npm scripts don't
+load it themselves. Locally, `op run` (the 1Password CLI) resolves it and passes the values to the
+command. The VS Code `start`, `develop` and `console` tasks do this for you. On Azure, `npm start`
+reads the App Service settings instead.
 
 The database defaults to SQLite in `.tmp/data.db`. Set `DATABASE_CLIENT=postgres` (plus
 `DATABASE_URL` or the host/port/name/user vars) to use Postgres. Azure blob uploads, SendGrid and
