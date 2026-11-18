@@ -1,0 +1,46 @@
+{
+  "kind": "collectionType",
+  "collectionName": "documentation_sections",
+  "info": {
+    "singularName": "documentation-section",
+    "pluralName": "documentation-sections",
+    "displayName": "Documentation Sections"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "parent": {
+      "type": "relation",
+      "target": "api::documentation-section.documentation-section",
+      "relation": "manyToOne",
+      "inversedBy": "sub_sections"
+    },
+    "sub_sections": {
+      "type": "relation",
+      "target": "api::documentation-section.documentation-section",
+      "relation": "oneToMany",
+      "mappedBy": "parent"
+    },
+    "technologies": {
+      "type": "relation",
+      "target": "api::technology.technology",
+      "relation": "manyToMany",
+      "mappedBy": "documentation_sections"
+    },
+    "docs": {
+      "type": "relation",
+      "target": "api::doc.doc",
+      "relation": "oneToMany",
+      "mappedBy": "section"
+    }
+  }
+}

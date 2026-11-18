@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_case_study_screenshots",
+  "info": {
+    "displayName": "Screenshots",
+    "icon": "landscape"
+  },
+  "options": {},
+  "attributes": {
+    "laptop": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "tablet": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "mobile": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}

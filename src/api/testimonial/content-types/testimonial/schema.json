@@ -1,0 +1,30 @@
+{
+  "kind": "collectionType",
+  "collectionName": "testimonials",
+  "info": {
+    "singularName": "testimonial",
+    "pluralName": "testimonials",
+    "displayName": "Testimonials"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "quote": {
+      "type": "richtext"
+    },
+    "client": {
+      "type": "relation",
+      "target": "api::client.client",
+      "relation": "manyToOne",
+      "inversedBy": "testimonials"
+    },
+    "case_study": {
+      "type": "relation",
+      "target": "api::case-study.case-study",
+      "relation": "manyToOne",
+      "inversedBy": "testimonials"
+    }
+  }
+}

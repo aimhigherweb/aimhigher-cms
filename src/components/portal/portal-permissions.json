@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_portal_portal_permissions",
+  "info": {
+    "displayName": "Portal Permissions",
+    "icon": "lock"
+  },
+  "options": {},
+  "attributes": {
+    "sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::portal-section.portal-section"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_brand_fonts",
+  "info": {
+    "displayName": "Fonts",
+    "icon": "italic"
+  },
+  "options": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "body": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    }
+  }
+}

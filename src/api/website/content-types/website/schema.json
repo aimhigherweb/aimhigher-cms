@@ -1,0 +1,68 @@
+{
+  "kind": "collectionType",
+  "collectionName": "websites",
+  "info": {
+    "singularName": "website",
+    "pluralName": "websites",
+    "displayName": "Website"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "domain": {
+      "type": "string",
+      "unique": true
+    },
+    "live": {
+      "type": "boolean",
+      "default": false
+    },
+    "https": {
+      "type": "boolean",
+      "default": true
+    },
+    "colours": {
+      "type": "component",
+      "repeatable": true,
+      "component": "brand.colours"
+    },
+    "client": {
+      "type": "relation",
+      "target": "api::client.client",
+      "relation": "manyToOne",
+      "inversedBy": "websites"
+    },
+    "fonts": {
+      "type": "component",
+      "repeatable": true,
+      "component": "brand.fonts"
+    },
+    "case_studies": {
+      "type": "relation",
+      "target": "api::case-study.case-study",
+      "relation": "oneToMany",
+      "mappedBy": "website"
+    },
+    "analytics_view": {
+      "type": "string",
+      "unique": true
+    },
+    "netlify_site": {
+      "type": "string",
+      "unique": true
+    },
+    "projects": {
+      "type": "relation",
+      "target": "api::project.project",
+      "relation": "oneToMany",
+      "mappedBy": "website"
+    },
+    "portal_permissions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "portal.portal-permissions"
+    }
+  }
+}

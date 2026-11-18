@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "clients",
+  "info": {
+    "singularName": "client",
+    "pluralName": "clients",
+    "displayName": "Client"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "docs": {
+      "type": "relation",
+      "target": "api::doc.doc",
+      "relation": "manyToMany",
+      "mappedBy": "clients"
+    },
+    "testimonials": {
+      "type": "relation",
+      "target": "api::testimonial.testimonial",
+      "relation": "oneToMany",
+      "mappedBy": "client"
+    },
+    "websites": {
+      "type": "relation",
+      "target": "api::website.website",
+      "relation": "oneToMany",
+      "mappedBy": "client"
+    },
+    "portal_permissions": {
+      "type": "component",
+      "repeatable": false,
+      "component": "portal.portal-permissions"
+    },
+    "briefs": {
+      "type": "relation",
+      "target": "api::brief.brief",
+      "relation": "oneToMany",
+      "mappedBy": "client"
+    },
+    "contracts": {
+      "type": "relation",
+      "target": "api::contract.contract",
+      "relation": "oneToMany",
+      "mappedBy": "client"
+    }
+  }
+}

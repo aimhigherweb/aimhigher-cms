@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_brand_colours",
+  "info": {
+    "displayName": "Colours",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "hex": {
+      "type": "string",
+      "default": "#"
+    },
+    "name": {
+      "type": "string"
+    }
+  }
+}
