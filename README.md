@@ -9,15 +9,14 @@ Requires Node 24 (`.nvmrc`; fnm/nvm pick it up).
 
 ```sh
 npm ci
-cp .env.example .env         # fill in op:// references to the 1Password item
 npm run build
 npm run develop              # http://localhost:1337/admin
 ```
 
-`.env` holds `op://AimHigher/aimhigher-cms/<FIELD>` references rather than secrets. `develop`, `start`
-and `console` run through `scripts/with-env.sh`, which resolves them with `op run` (the 1Password CLI).
-On Azure there's no `.env`, so the App Service settings are used instead. Every variable is listed in
-`.env.example`.
+`config/.env.1password` lists every variable, as `op://AimHigher/aimhigher-cms/<FIELD>` references
+or plain values that aren't secret. It holds no secrets, so it's committed. `develop`, `start` and
+`console` run through `scripts/with-env.sh`, which resolves it with `op run` (the 1Password CLI). On
+Azure the script skips it and the App Service settings are used instead.
 
 The database defaults to SQLite in `.tmp/data.db`. Set `DATABASE_CLIENT=postgres` (plus
 `DATABASE_URL` or the host/port/name/user vars) to use Postgres. Azure blob uploads, SendGrid and
@@ -49,10 +48,15 @@ you can revoke one by unpublishing it.
 Pushing to `prod` builds the project in GitHub Actions and deploys it, including `node_modules`, to
 the `aimhigher-cms` Azure Web App (`.github/workflows`). Azure doesn't build again.
 
-`scripts/sync-secrets.sh` copies values from 1Password to where they're needed. It prints the plan
-first and only changes things with `--apply`:
+Secrets live in 1Password. To copy them to GitHub Actions or the App Service, use `sync-secrets`
+from the terminal setup (`~/.zsh/conf/core.zsh`). It prints the plan first and only changes things
+with `--apply`:
 
 ```sh
-scripts/sync-secrets.sh github [--apply]   # Actions secrets (DISCORD_WEBHOOK); removes unused ones
-scripts/sync-secrets.sh azure [--apply]    # App Service settings, removes v3 leftovers, sets Node 24
+sync-secrets config/.env.1password github --apply
+sync-secrets config/.env.1password azure -g aimhigher --app aimhigher-cms \
+  --runtime 'NODE|24-lts' --set NODE_ENV=production --apply
 ```
+
+Azure skips `HOST` and `PORT` (App Service sets the port). Add `--prune` to remove the old v3
+settings (MongoDB, Algolia, `STRAPI_UUID`).
