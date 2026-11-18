@@ -28,8 +28,8 @@
     },
     "blog_posts": {
       "type": "relation",
-      "target": "api::blog-post.blog-post",
       "relation": "oneToMany",
+      "target": "api::blog-post.blog-post",
       "mappedBy": "author"
     },
     "name": {

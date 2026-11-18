@@ -34,8 +34,14 @@ Sentry each switch on only when their env vars are set. Without Azure, uploads g
 | `console` | REPL with the Strapi app loaded |
 | `upgrade` / `upgrade:dry` | Upgrade Strapi with the official codemods |
 
-There's a VS Code task for each script (Terminal › Run Task). `start` runs on its own when the folder
-opens.
+There's a VS Code task for each script (Terminal › Run Task). `develop` runs on its own when the folder
+opens, so you can edit content types straight away.
+
+## Ordering FAQs
+
+FAQs are ordered by their `sortOrder` field, which you set by dragging them in the admin list view
+(the drag icon next to Settings, from `strapi-plugin-sortable-entries`). New FAQs go to the end. The
+website's FAQ page sorts by `sortOrder`.
 
 ## Portal tokens
 

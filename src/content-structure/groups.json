@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "sections": {
+    "collectionTypes": {
+      "groups": [
+        {
+          "parent": null,
+          "name": "Website Content",
+          "id": "grp_fe9d8cc21c2548f2b9ea6856",
+          "children": [
+            {
+              "uid": "api::service.service",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::author.author",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::blog-post.blog-post",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::partner.partner",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::faq.faq",
+              "type": "contentType"
+            }
+          ]
+        },
+        {
+          "parent": null,
+          "name": "Projects",
+          "id": "grp_6f43f4a007084d6fb782be1e",
+          "children": [
+            {
+              "uid": "api::testimonial.testimonial",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::case-study.case-study",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::brief.brief",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::client.client",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::contract.contract",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::technology.technology",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::website.website",
+              "type": "contentType"
+            },
+            {
+              "uid": "api::project.project",
+              "type": "contentType"
+            }
+          ]
+        },
+        {
+          "parent": null,
+          "name": "Settings",
+          "id": "grp_37d318596c294916bcabbb24",
+          "children": [
+            {
+              "uid": "api::token.token",
+              "type": "contentType"
+            },
+            {
+              "uid": "plugin::users-permissions.user",
+              "type": "contentType"
+            }
+          ]
+        }
+      ]
+    },
+    "singleTypes": {
+      "groups": []
+    }
+  }
+}

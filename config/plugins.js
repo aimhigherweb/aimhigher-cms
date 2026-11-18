@@ -41,6 +41,10 @@ module.exports = ({ env }) => ({
 			dsn: env('SENTRY_DSN'),
 		},
 	},
+	// Drag-and-drop ordering in the admin list view, for content types with a `sortOrder` integer.
+	'sortable-entries': {
+		enabled: true,
+	},
 	graphql: {
 		config: {
 			landingPage: false,

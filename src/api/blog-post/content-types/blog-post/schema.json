@@ -38,8 +38,8 @@
     },
     "author": {
       "type": "relation",
-      "target": "api::author.author",
       "relation": "manyToOne",
+      "target": "api::author.author",
       "inversedBy": "blog_posts"
     },
     "categories": {

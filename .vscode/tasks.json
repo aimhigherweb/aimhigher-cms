@@ -3,22 +3,22 @@
 	"tasks": [
 		{
 			"label": "start",
-			"detail": "strapi start (runs automatically when the folder opens)",
+			"detail": "strapi start (production server; run build first)",
 			"type": "shell",
 			"command": "op run --env-file=config/.env.1password -- npm run start",
 			"isBackground": true,
 			"problemMatcher": [],
-			"runOptions": { "runOn": "folderOpen" },
-			"presentation": { "panel": "dedicated", "reveal": "silent", "group": "server" }
+			"presentation": { "panel": "dedicated", "group": "server" }
 		},
 		{
 			"label": "develop",
-			"detail": "strapi develop (dev server with admin auto-reload)",
+			"detail": "strapi develop (runs automatically when the folder opens)",
 			"type": "shell",
 			"command": "op run --env-file=config/.env.1password -- npm run develop",
 			"isBackground": true,
 			"problemMatcher": [],
-			"presentation": { "panel": "dedicated", "group": "server" }
+			"runOptions": { "runOn": "folderOpen" },
+			"presentation": { "panel": "dedicated", "reveal": "silent", "group": "server" }
 		},
 		{
 			"label": "build",

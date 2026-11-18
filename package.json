@@ -24,6 +24,7 @@
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.30.3",
     "strapi-plugin-oembed": "^2.0.3",
+    "strapi-plugin-sortable-entries": "1.4.2",
     "strapi-provider-upload-azure-storage": "^3.5.0",
     "styled-components": "^6.0.0"
   },

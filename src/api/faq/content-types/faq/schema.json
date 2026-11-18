@@ -16,6 +16,15 @@
     },
     "answer": {
       "type": "richtext"
+    },
+    "services": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::service.service",
+      "inversedBy": "faqs"
+    },
+    "sortOrder": {
+      "type": "integer"
     }
   }
 }
